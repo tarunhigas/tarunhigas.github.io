@@ -1,5 +1,5 @@
 Title: python blog
-Date: 2026-07-16
+Date: 2026-06-16
 Category: programming
 Tags: GenAI, LLM, machine-learning, deep-learning, announcement
 Slug: python-blog
