@@ -33,7 +33,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-# Pages
+# Pages 1
 DISPLAY_PAGES_ON_MENU = True
 
 # Social widget
