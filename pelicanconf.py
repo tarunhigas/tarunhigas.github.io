@@ -1,9 +1,9 @@
-AUTHOR = 'Raja CSP Raman'
-SITENAME = 'RajaCSP'
-SITETITLE = 'RajaCSP'
+AUTHOR = 'Tarunhiga'
+SITENAME = 'Tarunhiga'
+SITETITLE = 'Tarunhiga'
 SITEURL = ""
 PATH = "content"
-TIMEZONE = 'America/Moncton'
+TIMEZONE = 'Asia/kolkata'
 DEFAULT_LANG = 'en'
 THEME = 'theme'
 
@@ -12,7 +12,7 @@ DISABLE_URL_HASH = True
 
 # Copyright
 COPYRIGHT_YEAR = 2026
-COPYRIGHT_NAME = 'Raja CSP Raman'
+COPYRIGHT_NAME = 'Tarunhiga'
 
 # Dark mode support
 THEME_COLOR_AUTO_DETECT_BROWSER_PREFERENCE = True
@@ -24,9 +24,9 @@ PYGMENTS_STYLE_DARK = 'native'  # Dark mode
 
 # Static files
 STATIC_PATHS = ['images']
-SITELOGO = '/images/csp.jpeg'
+SITELOGO = '/images/tarunhiga.jpeg'
 
-# Feed generation is usually not desired when developing
+# Feed generation is usually not desired when developing1
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -38,7 +38,7 @@ DISPLAY_PAGES_ON_MENU = True
 
 # Social widget
 SOCIAL = (
-    ("github", "https://github.com/rajacsp"),
+    ("github", "https://github.com/tarunhigas"),
     ("linkedin", "https://www.linkedin.com/in/raja-csp-raman/"),
     ("substack", "https://articlevil.substack.com/"),
     ("python", "https://rajacsp.github.io/mlnotes/"),
