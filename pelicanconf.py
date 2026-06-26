@@ -1,7 +1,7 @@
 AUTHOR = 'Tarunhiga'
 SITENAME = 'Tarunhiga'
 SITETITLE = 'Tarunhiga'
-SITEURL = ""
+SITEURL = "https://tarunhigas.github.io/"
 PATH = "content"
 TIMEZONE = 'Asia/Kolkata'
 DEFAULT_LANG = 'en'
