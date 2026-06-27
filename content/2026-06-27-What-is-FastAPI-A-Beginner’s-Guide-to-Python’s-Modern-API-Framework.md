@@ -1,7 +1,7 @@
 Title: What is FastAPI? A Beginner’s Guide to Python’s Modern API Framework
 Date: 2026-06-27
 Category: programming
-Tags: Python, FastAPI ,Framework
+Tags: #flask, #framework, FastAPI
 Slug:What-is-FastAPI-A-Beginner’s-Guide-to-Python’s-Modern-API-Framework
 
 If you’ve been learning Python for a while, you’ve probably come across names like Flask, Django, and FastAPI. While Flask and Django have been around for years, FastAPI has quickly become one of the most popular choices for building APIs.
