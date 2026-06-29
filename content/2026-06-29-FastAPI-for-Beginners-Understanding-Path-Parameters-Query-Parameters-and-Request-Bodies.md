@@ -18,7 +18,7 @@ But each one has a completely different purpose.
 
 Let’s understand them in the simplest way possible.
 
-# **Imagine You’re Ordering Pizza **
+# **Imagine You’re Ordering Pizza**
 
 Suppose a pizza shop has an online ordering system.
 
@@ -278,7 +278,7 @@ Find product number 10.
 Show only electronics.
 
     POST /products
-    
+
 Create a new product using a request body containing the product details.
 
 Each method serves a different purpose, making APIs organized and easy to use.
