@@ -2,7 +2,7 @@ Title: What Is FastAPI? A Beginner-Friendly Introduction
 Date: 2026-06-26
 Category: programming
 Tags: Python, FastAPI ,Framework
-Slug: what-is-fastapi-a-beginner-friendly-introduction
+Slug: What-Is-FastAPI-A-Beginner-Friendly-Introduction
 
 You’ve learned Python variables, loops, functions, and maybe even file handling. But eventually, you’ll hear developers talking about APIs and frameworks like FastAPI.
 

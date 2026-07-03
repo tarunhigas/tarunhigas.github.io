@@ -2,7 +2,7 @@ Title: Teaching Machines to See Fashion: FashionCLIP, Garment Recognition & the 
 Date: 2026-06-30
 Category: programming
 Tags:  OpenAI, garments, FashionCLIP
-Slug: teaching-machines-to-see-fashion-fashionclip-garment-recognition-vector-database
+Slug:Teaching-Machines-to-See-Fashion-FashionCLIP-Garment-Recognition-and-the-Vector-Database-Behind It-All
 
 # **The Problem With Fashion Search (And Why It’s Harder Than It Looks)**
 
