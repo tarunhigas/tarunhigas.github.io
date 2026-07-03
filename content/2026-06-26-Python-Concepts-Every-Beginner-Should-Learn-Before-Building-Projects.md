@@ -2,7 +2,7 @@ Title: Python Concepts Every Beginner Should Learn Before Building Projects
 Date: 2026-06-26
 Category: programming
 Tags: Python, fundamentals, 
-Slug: Python-Concepts-Every-Beginner-Should-Learn-Before-Building-Projects
+Slug: python-concepts-every-beginner-should-learn-before-building-projects
 
 very beginner reaches the same exciting moment: you’ve finished a few Python lessons, and now you want to build something real. Maybe it’s a calculator, a to-do app, a game, or even an AI project.
 

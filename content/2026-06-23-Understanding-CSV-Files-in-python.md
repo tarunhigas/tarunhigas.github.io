@@ -2,7 +2,7 @@ Title: Understanding CSV Files in Python: The Simplest Way to Store Data
 Date: 2026-06-23
 Category: programming
 Tags: Python, Code, csv files
-Slug: Understanding-CSV-Files-in-Python-and-store-data
+Slug: understanding-csv-files-in-python-and-store-data
 
 Have you ever opened a spreadsheet and wondered how programs store all that information behind the scenes?
 

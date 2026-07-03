@@ -2,7 +2,7 @@ Title: Why GitHub Renamed "Master" to "Main" (And What It Actually Changed)
 Date: 2026-07-03
 Category: programming
 Tags:  Github, master, main
-Slug:Why-GitHub-Renamed-"Master"-to-"Main"-(And-What-It-Actually-Changed)
+Slug: why-github-renamed-master-to-main-and-what-it-actually-changed
 
 If you've opened a new GitHub repository any time in the last few years, you've probably noticed the default branch is called `main`, not `master`. If you've been coding long enough, you might remember when that wasn't the case — `master` was the default for basically the entire history of Git, since 2005.
 

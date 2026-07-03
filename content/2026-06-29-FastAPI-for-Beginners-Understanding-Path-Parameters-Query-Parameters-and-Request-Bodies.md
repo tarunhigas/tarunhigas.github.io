@@ -2,7 +2,7 @@ Title: FastAPI for Beginners: Understanding Path Parameters, Query Parameters, a
 Date: 2026-06-29
 Category: programming
 Tags:  python, parameters, FastAPI
-Slug:FastAPI-for-Beginners-Understanding-Path-Parameters-Query-Parameters-and-Request-Bodies
+Slug: fastapi-for-beginners-path-query-parameters-request-bodies
 
 When you first start learning FastAPI, you’ll quickly come across three terms that seem confusing:
 

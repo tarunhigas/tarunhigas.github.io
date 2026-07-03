@@ -2,7 +2,7 @@ Title: Building FastAPI the Right Way: Project Structure, Lifecycle & URL Design
 Date: 2026-06-28
 Category: programming
 Tags:  #API, endpoints, FastAPI
-Slug:Building-FastAPI-the-Right-Way-Project-Structure-Lifecycle-URL-Design
+Slug: building-fastapi-the-right-way-project-structure-lifecycle-url-design
 
 If you’ve just discovered FastAPI, you already know the feeling — spinning up your first endpoint in under ten lines of code feels like magic. But magic has a way of turning messy once your project grows beyond a single file.
 

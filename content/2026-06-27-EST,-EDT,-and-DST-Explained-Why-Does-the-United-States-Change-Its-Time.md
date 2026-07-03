@@ -2,7 +2,7 @@ Title: EST, EDT, and DST Explained: Why Does the United States Change Its Time?
 Date: 2026-06-27
 Category: programming
 Tags: DST, Timezones, EST
-Slug:EST-EDT-and-DST-Explained-Why-Does-the-United-States-Change-Its-Time.
+Slug: est-edt-and-dst-explained-why-does-united-states-change-its-time
 
 Have you ever scheduled an online meeting with someone in the United States and noticed that sometimes the meeting is listed in EST and other times in EDT?
 
