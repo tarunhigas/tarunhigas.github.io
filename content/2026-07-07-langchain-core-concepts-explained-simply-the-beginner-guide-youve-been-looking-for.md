@@ -47,7 +47,7 @@ It's like asking a very well-read teacher.
 
 ---
 
-# 2. Prompt
+# **2. Prompt**
 
 A prompt is simply the instruction you give the AI.
 
@@ -83,7 +83,7 @@ A better prompt usually leads to a better response.
 
 ---
 
-# 3. Prompt Templates
+# **3. Prompt Templates**
 
 What if you ask the same type of question over and over, but only one part changes?
 
@@ -117,7 +117,7 @@ One template. Endless possibilities.
 
 ---
 
-# 4. Chains
+# **4. Chains**
 
 A chain connects multiple steps together.
 
@@ -162,7 +162,7 @@ Each component passes its output to the next.
 
 ---
 
-# 5. Tools
+# **5. Tools**
 
 An LLM doesn't automatically know today's weather, perform calculations, or search the internet.
 
@@ -190,7 +190,7 @@ These tools help the AI perform tasks beyond simply generating text.
 
 ---
 
-# 6. Agents
+# **6. Agents**
 
 An agent is like a smart manager.
 
@@ -221,7 +221,7 @@ It makes decisions instead of blindly following a fixed workflow.
 
 ---
 
-# 7. Memory
+# **7. Memory**
 
 Normally, AI forgets previous conversations.
 
@@ -249,7 +249,7 @@ Memory makes conversations feel more natural and personalized.
 
 ---
 
-# 8. Retrievers
+# **8. Retrievers**
 
 An LLM can't memorize every document you own.
 
@@ -273,7 +273,7 @@ It searches your documents and returns only the most useful information.
 
 ---
 
-# 9. Vector Databases
+# **9. Vector Databases**
 
 Searching documents by exact words isn't always enough.
 
@@ -301,7 +301,7 @@ It's like having a search engine that understands ideas, not just words.
 
 ---
 
-# 10. RAG (Retrieval-Augmented Generation)
+# **10. RAG (Retrieval-Augmented Generation)**
 
 RAG combines retrieval with AI-generated responses.
 
@@ -345,7 +345,7 @@ Although it sounds like magic, it's simply different components working together
 
 ---
 
-# Final Thoughts
+# **Final Thoughts**
 
 When you first hear terms like **LLM**, **Agent**, **Retriever**, or **RAG**, they can seem overwhelming. But each one solves a simple problem.
 
@@ -360,4 +360,3 @@ When you first hear terms like **LLM**, **Agent**, **Retriever**, or **RAG**, th
 * **Vector Database** understands meaning, not just words.
 * **RAG** combines retrieved knowledge with AI-generated answers.
 
-Once you understand these building blocks, LangChain becomes much less intimidating. Instead of seeing a collection of complicated terms, you'll see a toolkit where every piece has a clear purpose. And that's the first step toward building AI applications with confidence.
