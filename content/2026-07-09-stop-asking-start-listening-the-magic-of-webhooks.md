@@ -75,36 +75,36 @@ Simple version: *Event happens → grab the saved address → send a package of 
 
 Here's what that looks like in actual code (using Node.js, a popular way to write server-side JavaScript):
 
-  // SENDER SIDE — sending a webhook when an event happens
+    // SENDER SIDE — sending a webhook when an event happens
 
-  const axios = require('axios'); // a simple tool for making web requests
+    const axios = require('axios'); // a simple tool for making web requests
 
-  // This URL was given to us earlier by the receiving app
-  const receiverUrl = 'https://mystore.com/webhooks/payment';
+    // This URL was given to us earlier by the receiving app
+    const receiverUrl = 'https://mystore.com/webhooks/payment';
 
-  async function notifyPaymentSuccess(orderDetails) {
-    try {
-      // Send a POST request with the event data as the "payload"
-      await axios.post(receiverUrl, {
-        event: 'payment.succeeded',
-        orderId: orderDetails.id,
-        amount: orderDetails.amount,
-        customerEmail: orderDetails.email,
-        timestamp: new Date().toISOString()
-      });
+    async function notifyPaymentSuccess(orderDetails) {
+      try {
+        // Send a POST request with the event data as the "payload"
+        await axios.post(receiverUrl, {
+          event: 'payment.succeeded',
+          orderId: orderDetails.id,
+          amount: orderDetails.amount,
+          customerEmail: orderDetails.email,
+          timestamp: new Date().toISOString()
+        });
 
-      console.log('Webhook sent successfully!');
-    } catch (error) {
-      console.error('Failed to send webhook:', error.message);
-    }
-  } 
+        console.log('Webhook sent successfully!');
+      } catch (error) {
+        console.error('Failed to send webhook:', error.message);
+      }
+    } 
 
-  // Call this function whenever a payment actually succeeds
-  notifyPaymentSuccess({
-    id: '1234',
-    amount: 42,
-    email: 'customer@example.com'
-  });
+    // Call this function whenever a payment actually succeeds
+    notifyPaymentSuccess({
+      id: '1234',
+      amount: 42,
+      email: 'customer@example.com'
+    });
 
 
 Nothing scary here — it's just a package of information (`event`, `orderId`, `amount`, etc.) being sent to a saved address.
