@@ -102,8 +102,8 @@ Here's what that looks like in actual code (using Node.js, a popular way to writ
   notifyPaymentSuccess({
     id: '1234',
     amount: 42,
-    email: 'customer@example.com'
-  });
+      email: 'customer@example.com'
+    });
 
 
 Nothing scary here — it's just a package of information (`event`, `orderId`, `amount`, etc.) being sent to a saved address.
