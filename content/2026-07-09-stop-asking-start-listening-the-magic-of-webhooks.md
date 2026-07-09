@@ -75,37 +75,35 @@ Simple version: *Event happens → grab the saved address → send a package of 
 
 Here's what that looks like in actual code (using Node.js, a popular way to write server-side JavaScript):
 
-```javascript
-// SENDER SIDE — sending a webhook when an event happens
+    // SENDER SIDE — sending a webhook when an event happens
 
-const axios = require('axios'); // a simple tool for making web requests
+    const axios = require('axios'); // a simple tool for making web requests
 
-// This URL was given to us earlier by the receiving app
-const receiverUrl = 'https://mystore.com/webhooks/payment';
+    // This URL was given to us earlier by the receiving app
+    const receiverUrl = 'https://mystore.com/webhooks/payment';
 
-async function notifyPaymentSuccess(orderDetails) {
-  try {
-    // Send a POST request with the event data as the "payload"
-    await axios.post(receiverUrl, {
-      event: 'payment.succeeded',
-      orderId: orderDetails.id,
-      amount: orderDetails.amount,
-      customerEmail: orderDetails.email,
-      timestamp: new Date().toISOString()
+    async function notifyPaymentSuccess(orderDetails) {
+      try {
+        // Send a POST request with the event data as the "payload"
+        await axios.post(receiverUrl, {
+          event: 'payment.succeeded',
+          orderId: orderDetails.id,
+          amount: orderDetails.amount,
+          customerEmail: orderDetails.email,
+          timestamp: new Date().toISOString()
+        });
+        console.log('Webhook sent successfully!');
+      } catch (error) {
+        console.error('Failed to send webhook:', error.message);
+      }
+    }
+
+    // Call this function whenever a payment actually succeeds
+    notifyPaymentSuccess({
+      id: '1234',
+      amount: 42,
+      email: 'customer@example.com'
     });
-    console.log('Webhook sent successfully!');
-  } catch (error) {
-    console.error('Failed to send webhook:', error.message);
-  }
-}
-
-// Call this function whenever a payment actually succeeds
-notifyPaymentSuccess({
-  id: '1234',
-  amount: 42,
-  email: 'customer@example.com'
-});
-```
 
 Nothing scary here — it's just a package of information (`event`, `orderId`, `amount`, etc.) being sent to a saved address.
 
@@ -119,30 +117,30 @@ If you're building the app that *receives* webhook notifications, you need to:
 
 Here's a simple receiver built with Express (a popular Node.js framework):
 
-  // RECEIVER SIDE — listening for incoming webhooks
+    // RECEIVER SIDE — listening for incoming webhooks
 
-  const express = require('express');
-  const app = express();
-  app.use(express.json()); // lets us read incoming JSON data
-  
-  // This is the endpoint we told the sender about
-  app.post('/webhooks/payment', (req, res) => {
-    const event = req.body;
+    const express = require('express');
+    const app = express();
+    app.use(express.json()); // lets us read incoming JSON data
 
-    console.log('Webhook received:', event);
+    // This is the endpoint we told the sender about
+    app.post('/webhooks/payment', (req, res) => {
+      const event = req.body;
 
-    if (event.event === 'payment.succeeded') {
-      // Do something useful — update your database, send an email, etc.
-      console.log(`Order ${event.orderId} marked as paid.`);
-    }
+      console.log('Webhook received:', event);
 
-    // Respond quickly to say "message received!"
-    res.status(200).send('OK');
-  });
+      if (event.event === 'payment.succeeded') {
+        // Do something useful — update your database, send an email, etc.
+        console.log(`Order ${event.orderId} marked as paid.`);
+      }
 
-  app.listen(3000, () => {
-    console.log('Listening for webhooks on port 3000...');
-  });
+      // Respond quickly to say "message received!"
+      res.status(200).send('OK');
+    });
+
+    app.listen(3000, () => {
+      console.log('Listening for webhooks on port 3000...');
+    });
 
 
 That's really it. When Stripe (or any sender) hits this URL with a `POST` request, this code wakes up, reads the data, does something with it, and replies "OK."
@@ -168,18 +166,18 @@ This is usually done using a **secret signature** — a bit like a wax seal on a
 
 Here's roughly what that check looks like in code:
 
-  const crypto = require('crypto');
+    const crypto = require('crypto');
 
-  function isValidSignature(payload, receivedSignature, secretKey)  {
-    // Recreate the signature ourselves using the same secret key
-    const expectedSignature = crypto
-      .createHmac('sha256', secretKey)
-      .update(JSON.stringify(payload))
-      .digest('hex');
+    function isValidSignature(payload, receivedSignature, secretKey) {
+      // Recreate the signature ourselves using the same secret key
+      const expectedSignature = crypto
+        .createHmac('sha256', secretKey)
+        .update(JSON.stringify(payload))
+        .digest('hex');
 
-    // If it matches what the sender sent us, we know it's legit
-    return expectedSignature === receivedSignature;
-  }
+      // If it matches what the sender sent us, we know it's legit
+      return expectedSignature === receivedSignature;
+    }
 
 
 You don't need to memorize the technical details right now — just know that **verifying webhook signatures is a standard, important step**, not an optional extra.
