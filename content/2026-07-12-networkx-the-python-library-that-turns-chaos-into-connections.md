@@ -98,7 +98,7 @@ Once you've built a graph, NetworkX lets you interrogate it. Here are a few exam
 **"Who's the most connected person?"**
 
 ```python
-    print(nx.degree_centrality(G))
+print(nx.degree_centrality(G))
 ```
 
 This calculates how many direct connections each person has relative to everyone else. In our example, Carol will score highest — she's friends with three people while everyone else is friends with two or fewer.
@@ -108,7 +108,7 @@ In the real world, this kind of analysis finds influencers in social networks, i
 **"What's the shortest path between two people?"**
 
 ```python
-    print(nx.shortest_path(G, "Alice", "Dave"))
+print(nx.shortest_path(G, "Alice", "Dave"))
 # Output: ['Alice', 'Carol', 'Dave']
 ```
 
@@ -119,7 +119,7 @@ This exact same logic is what powers GPS navigation (shortest route between two 
 **"Are there tight-knit groups within the network?"**
 
 ```python
-    from networkx.algorithms.community import greedy_modularity_communities
+from networkx.algorithms.community import greedy_modularity_communities
 
 communities = greedy_modularity_communities(G)
     print(list(communities))
